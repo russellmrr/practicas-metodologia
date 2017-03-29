@@ -14,12 +14,12 @@ public class FileReader {
 		this.filename = filename;
 	}
 	
-	public int[] readIntArray() throws FileNotFoundException {
+	public long[] readLongArray() throws FileNotFoundException {
 		Scanner read = new Scanner(new File(filename));
 		int l = read.nextInt();
-		int[] a = new int[l];
+		long[] a = new long[l];
 		for(int i = 0; i < l; i++) {
-			a[i] = read.nextInt();
+			a[i] = read.nextLong();
 		}
 		read.close();
 		return a;
